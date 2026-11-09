@@ -1,0 +1,104 @@
+{
+  "index.html": {
+    "lang": "fr",
+    "title": "Éclora — Votre expertise mérite d’être vue",
+    "description": "Des sites web professionnels pour les PME et les indépendants. Design adapté au mobile, formulaire de contact et mise en ligne. Sans abonnement de maintenance obligatoire.",
+    "alternates": [
+      {
+        "rel": "alternate",
+        "hreflang": "fr",
+        "href": "index.html"
+      },
+      {
+        "rel": "alternate",
+        "hreflang": "en",
+        "href": "en.html"
+      }
+    ]
+  },
+  "en.html": {
+    "lang": "en",
+    "title": "Éclora — Your expertise deserves to be seen",
+    "description": "Professional websites for small businesses and independent professionals. Mobile-friendly design, contact form and website launch. No mandatory maintenance subscription.",
+    "alternates": [
+      {
+        "rel": "alternate",
+        "hreflang": "fr",
+        "href": "index.html"
+      },
+      {
+        "rel": "alternate",
+        "hreflang": "en",
+        "href": "en.html"
+      }
+    ]
+  },
+  "projet.html": {
+    "lang": "fr",
+    "title": "Parlez-nous de votre projet — Éclora",
+    "description": "Vous savez déjà ce que vous souhaitez ? Présentez-nous votre entreprise et vos idées en remplissant le formulaire.",
+    "alternates": [
+      {
+        "rel": "alternate",
+        "hreflang": "fr",
+        "href": "projet.html"
+      },
+      {
+        "rel": "alternate",
+        "hreflang": "en",
+        "href": "project.html"
+      }
+    ]
+  },
+  "project.html": {
+    "lang": "en",
+    "title": "Tell us about your project — Éclora",
+    "description": "Already know what you have in mind? Tell us about your business and ideas by completing the form.",
+    "alternates": [
+      {
+        "rel": "alternate",
+        "hreflang": "fr",
+        "href": "projet.html"
+      },
+      {
+        "rel": "alternate",
+        "hreflang": "en",
+        "href": "project.html"
+      }
+    ]
+  },
+  "merci.html": {
+    "lang": "fr",
+    "title": "Merci pour votre demande. — Éclora",
+    "description": "",
+    "alternates": [
+      {
+        "rel": "alternate",
+        "hreflang": "fr",
+        "href": "merci.html"
+      },
+      {
+        "rel": "alternate",
+        "hreflang": "en",
+        "href": "thanks.html"
+      }
+    ]
+  },
+  "thanks.html": {
+    "lang": "en",
+    "title": "Thank you for your enquiry. — Éclora",
+    "description": "",
+    "alternates": [
+      {
+        "rel": "alternate",
+        "hreflang": "fr",
+        "href": "merci.html"
+      },
+      {
+        "rel": "alternate",
+        "hreflang": "en",
+        "href": "thanks.html"
+      }
+    ]
+  }
+}
