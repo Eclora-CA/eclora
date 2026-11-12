@@ -8,6 +8,7 @@ type FieldValue = string | string[];
 type Payload = Record<string, FieldValue>;
 
 const ALLOWED_ORIGINS = new Set([
+  "https://app.eclora.ca",
   "https://eclora.ca",
   "https://www.eclora.ca",
   "http://localhost:4173",
