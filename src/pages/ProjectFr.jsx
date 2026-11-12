@@ -3,7 +3,47 @@ import {ContactForm, SourceUrl, ValidatedInput} from '../components/Forms.jsx';
 import {PortfolioPreview} from '../components/PortfolioPreview.jsx';
 
 export default function ProjectFr(){
- return <><main className={"wrap project-page"}><div className={"project-heading"}><a className={"textlink"} href={"index.html#offre"}>{"Retour à l’offre"}</a><p className={"eyebrow"}>{"VOTRE PROJET COMMENCE ICI"}</p><h1>{"Parlez-nous de votre projet"}</h1><p className={"intro"}>{"Vous savez déjà ce que vous souhaitez ? Présentez-nous votre entreprise et vos idées en remplissant le formulaire."}</p></div><div className={"project-layout"}><ContactForm lang="fr" className={"project-form"} action={"https://formsubmit.co/info@eclora.ca"} method={"POST"} aria-describedby={"project-required project-scope project-privacy"} target={"_blank"} rel={"noopener"}>{"\n"}<SourceUrl initialValue="https://eclora.ukf-sylvain.chatgpt.site/projet.html"/><input type={"hidden"} name={"_autoresponse"} value={"Bonjour,\n\nMerci de nous avoir présenté votre projet. Nous avons bien reçu vos réponses. Nous allons les examiner et vous recontacter pour confirmer les prochaines étapes ou préciser vos besoins. Si des fonctionnalités ou services supplémentaires sont nécessaires, nous en discuterons avec vous avant tout engagement.\n\nÀ bientôt,\nL’équipe Éclora\ninfo@eclora.ca"}/><input type={"text"} name={"_honey"} className={"form-honeypot"} tabIndex={"-1"} autoComplete={"off"} aria-hidden={"true"}/>{"\n"}<input type={"hidden"} name={"_subject"} value={"Éclora — Nouveau projet web"}/><input type={"hidden"} name={"_template"} value={"table"}/><input type={"hidden"} name={"language"} value={"fr"}/>{"\n"}<p id={"project-required"} className={"field-hint"}>{"Les champs marqués d’un * sont obligatoires."}</p>
+ return <><main className={"wrap project-page"}><div className={"project-heading"}><a className={"textlink"} href={"index.html#offre"}>{"Retour à l’offre"}</a><p className={"eyebrow"}>{"VOTRE PROJET COMMENCE ICI"}</p><h1>{"Parlez-nous de votre projet"}</h1><p className={"intro"}>{"Vous savez déjà ce que vous souhaitez ? Présentez-nous votre entreprise et vos idées en remplissant le formulaire."}</p></div><div className={"project-layout"}>
+    <ContactForm 
+        lang="fr" 
+        className={"project-form"} 
+        //action={"https://formsubmit.co/info@eclora.ca"} 
+        //method={"POST"} 
+        aria-describedby={"project-required project-scope project-privacy"} 
+        //target={"_blank"} 
+        //rel={"noopener"}
+        >
+            {"\n"}<SourceUrl 
+                //initialValue="https://eclora.ukf-sylvain.chatgpt.site/projet.html"
+                />
+            <input
+                type="hidden"
+                name="form_type"
+                value="contact"/>
+            {/* <input 
+                type={"hidden"} 
+                name={"_autoresponse"} 
+                value={"Bonjour,\n\nMerci de nous avoir présenté votre projet. Nous avons bien reçu vos réponses. Nous allons les examiner et vous recontacter pour confirmer les prochaines étapes ou préciser vos besoins. Si des fonctionnalités ou services supplémentaires sont nécessaires, nous en discuterons avec vous avant tout engagement.\n\nÀ bientôt,\nL’équipe Éclora\ninfo@eclora.ca"}/> */}
+            <input 
+                type={"text"} 
+                name={"_honey"} 
+                className={"form-honeypot"} 
+                tabIndex={"-1"} 
+                autoComplete={"off"} 
+                aria-hidden={"true"}/>{"\n"}
+            {/* <input 
+                type={"hidden"} 
+                name={"_subject"} 
+                value={"Éclora — Nouveau projet web"}/>
+            <input 
+                type={"hidden"} 
+                name={"_template"} 
+                value={"table"}/> */}
+            <input 
+                type={"hidden"} 
+                name={"language"} 
+                value={"fr"}/>{"\n"}
+            <p id={"project-required"} className={"field-hint"}>{"Les champs marqués d’un * sont obligatoires."}</p>
 <fieldset className={"project-section"}><legend><span>{"01"}</span>{" Votre entreprise"}</legend><div className={"project-field"}><label htmlFor={"name"}>{"Votre nom "}<span aria-hidden={"true"}>{"*"}</span></label><input type={"text"} id={"name"} name={"name"} required={true} autoComplete={"name"} maxLength={"254"}/></div><div className={"project-field"}><label htmlFor={"email"}>{"Votre courriel "}<span aria-hidden={"true"}>{"*"}</span></label><ValidatedInput type={"email"} id={"email"} name={"email"} required={true} autoComplete={"email"} maxLength={"254"} pattern={"[^\\s@]+@[^\\s@]+\\.[^\\s@]+"} inputMode={"email"}/></div><div className={"project-field"}><label htmlFor={"phone"}>{"Téléphone (facultatif)"}</label><ValidatedInput type={"tel"} id={"phone"} name={"phone"} autoComplete={"tel"} maxLength={"40"} inputMode={"tel"}/></div><div className={"project-field"}><label htmlFor={"business"}>{"Nom de votre entreprise "}<span aria-hidden={"true"}>{"*"}</span></label><input type={"text"} id={"business"} name={"business"} required={true} autoComplete={"organization"} maxLength={"254"}/></div><div className={"project-field"}><label htmlFor={"activity"}>{"Présentez votre activité et vos clients "}<span aria-hidden={"true"}>{"*"}</span></label><p className={"field-hint"} id={"activity-hint"}>{"Quels services ou produits proposez-vous, et à qui ?"}</p><textarea id={"activity"} name={"activity"} rows={"3"} maxLength={"5000"} required={true} aria-describedby={"activity-hint"} defaultValue={""}/></div></fieldset>
 
 <fieldset className={"project-section"}><legend><span>{"02"}</span>{" Votre projet"}</legend><div className={"project-field"}><label htmlFor={"goal"}>{"Quel est l’objectif principal de votre site ? "}<span aria-hidden={"true"}>{"*"}</span></label><select id={"goal"} name={"goal"} required={true} defaultValue=""><option value={""}>{"Choisissez une réponse"}</option><option>{"Présenter mon entreprise et mes services"}</option><option>{"Recevoir des demandes de contact"}</option><option>{"Permettre la réservation de rendez-vous"}</option><option>{"Présenter mes réalisations ou mes produits"}</option><option>{"Vendre en ligne"}</option><option>{"Autre / à préciser"}</option></select></div>

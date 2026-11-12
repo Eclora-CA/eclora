@@ -12,6 +12,89 @@ export default function HomeEn(){
 <details><summary>{"Can we add a newsletter?"}</summary><p>{"Yes, as an optional extra with a quote. The sending service and any fees are specified before activation. Campaign writing and management are not included in the website creation package."}</p></details>
 <details><summary>{"What is corrected after delivery?"}</summary><p>{"Issues with our work reported within 10 business days of delivery, such as a button or form that does not work as agreed. New requests for content or design are paid changes."}</p></details>
 </div></section>
-{"\n"}<section id={"contact"} className={"contact-section"}><div className={"wrap contact-grid"}><div><p className={"eyebrow"}>{"IT ALL STARTS WITH YOUR IDEA"}</p><h2>{"Let’s bring"}<br/>{"a little brilliance to"}<br/><em>{"your project."}</em></h2><p>{"Tell us about your business and what you would like to see on your website."}</p><p className={"contact-email"}>{"Email us: "}<a href={"mailto:info@eclora.ca"}>{"info@eclora.ca"}</a></p><p className={"contact-note"}>{"Describe your project online and we will get back to you by email."}</p><a className={"button"} href={"project.html"}>{"Start my project"}</a></div><ContactForm lang="en" aria-describedby={"form-note"} action={"https://formsubmit.co/info@eclora.ca"} method={"POST"} target={"_blank"} rel={"noopener"}><SourceUrl initialValue="https://eclora.ukf-sylvain.chatgpt.site/en.html"/><input type={"hidden"} name={"_autoresponse"} value={"Hello,\n\nThank you for your message. We have received your enquiry and will get back to you after reviewing it.\n\nBest regards,\nThe Éclora team\ninfo@eclora.ca"}/><input type={"text"} name={"_honey"} className={"form-honeypot"} tabIndex={"-1"} autoComplete={"off"} aria-hidden={"true"}/><input type={"hidden"} name={"language"} value={"en"}/><input type={"hidden"} name={"_template"} value={"table"}/><input type={"hidden"} name={"_subject"} value={"Éclora — New website enquiry"}/><label htmlFor={"name"}>{"Your name"}</label><input id={"name"} name={"name"} autoComplete={"name"} placeholder={"First and last name"} required={true} maxLength={"150"}/><label htmlFor={"email"}>{"Your email"}</label><ValidatedInput type={"email"} id={"email"} name={"email"} autoComplete={"email"} placeholder={"you@example.ca"} required={true} maxLength={"254"} pattern={"[^\\s@]+@[^\\s@]+\\.[^\\s@]+"} inputMode={"email"}/><label htmlFor={"business"}>{"Your business"}</label><input id={"business"} name={"business"} autoComplete={"organization"} placeholder={"Your business name"} maxLength={"150"}/><label htmlFor={"phone"}>{"Phone (optional)"}</label><ValidatedInput id={"phone"} name={"phone"} type={"tel"} autoComplete={"tel"} maxLength={"40"} placeholder={"Your phone number"} inputMode={"tel"}/><label htmlFor={"message"}>{"Tell us about your project"}</label><textarea id={"message"} name={"message"} rows={"4"} placeholder={"Your business, your needs, your ideas…"} required={true} maxLength={"5000"} defaultValue={""}/><button type={"submit"} className={"button"}>{"Send my enquiry"}</button><p id={"form-note"} className={"fine"}>{"Your name, email and message are required. Your enquiry is sent through FormSubmit to info@eclora.ca so we can reply.Verification and submission confirmation open in a new tab."}</p></ContactForm></div></section>
+{"\n"}<section id={"contact"} className={"contact-section"}><div className={"wrap contact-grid"}><div><p className={"eyebrow"}>{"IT ALL STARTS WITH YOUR IDEA"}</p><h2>{"Let’s bring"}<br/>{"a little brilliance to"}<br/><em>{"your project."}</em></h2><p>{"Tell us about your business and what you would like to see on your website."}</p><p className={"contact-email"}>{"Email us: "}<a href={"mailto:info@eclora.ca"}>{"info@eclora.ca"}</a></p><p className={"contact-note"}>{"Describe your project online and we will get back to you by email."}</p><a className={"button"} href={"project.html"}>{"Start my project"}</a></div>
+    <ContactForm 
+        lang="en" 
+        aria-describedby={"form-note"} 
+        //action={"https://formsubmit.co/info@eclora.ca"} 
+        //method={"POST"} target={"_blank"} 
+        //rel={"noopener"}
+        ><SourceUrl 
+            //initialValue="https://eclora.ukf-sylvain.chatgpt.site/en.html"
+        />
+{/*         <input 
+            type={"hidden"} 
+            name={"_autoresponse"} 
+            value={"Hello,\n\nThank you for your message. We have received your enquiry and will get back to you after reviewing it.\n\nBest regards,\nThe Éclora team\ninfo@eclora.ca"}/> */}
+        <input 
+            type={"text"} 
+            name={"_honey"} 
+            className={"form-honeypot"} 
+            tabIndex={"-1"} 
+            autoComplete={"off"} 
+            aria-hidden={"true"}/>
+        <input 
+            type={"hidden"} 
+            name={"language"} 
+            value={"en"}/>
+        {/* <input 
+            type={"hidden"} 
+            name={"_template"} 
+            value={"table"}/>
+        <input 
+            type={"hidden"} 
+            name={"_subject"} 
+            value={"Éclora — New website enquiry"}/> */}
+        <label htmlFor={"name"}>{"Your name"}</label>
+        <input 
+            id={"name"} 
+            name={"name"} 
+            autoComplete={"name"} 
+            placeholder={"First and last name"} 
+            required={true} 
+            maxLength={"150"}/>
+        <label htmlFor={"email"}>{"Your email"}</label>
+        <ValidatedInput 
+            type={"email"} 
+            id={"email"} 
+            name={"email"} 
+            autoComplete={"email"} 
+            placeholder={"you@example.ca"} 
+            required={true} 
+            maxLength={"254"} 
+            pattern={"[^\\s@]+@[^\\s@]+\\.[^\\s@]+"} 
+            inputMode={"email"}/>
+        <label htmlFor={"business"}>{"Your business"}</label>
+        <input 
+            id={"business"} 
+            name={"business"} 
+            autoComplete={"organization"} 
+            placeholder={"Your business name"} 
+            maxLength={"150"}/>
+        <label htmlFor={"phone"}>{"Phone (optional)"}</label>
+        <ValidatedInput 
+            id={"phone"} 
+            name={"phone"} 
+            type={"tel"} 
+            autoComplete={"tel"} 
+            maxLength={"40"} 
+            placeholder={"Your phone number"} 
+            inputMode={"tel"}/>
+        <label htmlFor={"message"}>{"Tell us about your project"}</label>
+        <textarea 
+            id={"message"} 
+            name={"message"} 
+            rows={"4"} 
+            placeholder={"Your business, your needs, your ideas…"} 
+            required={true} 
+            maxLength={"5000"} 
+            defaultValue={""}/>
+        <button type={"submit"} className={"button"}>{"Send my enquiry"}</button>
+        <p id={"form-note"} className={"fine"}>
+            {"Your name, email and message are required. Your enquiry is sent through FormSubmit to info@eclora.ca so we can reply.Verification and submission confirmation open in a new tab."}
+        </p>
+    </ContactForm>
+    </div>
+    </section>
 </main></>;
 }

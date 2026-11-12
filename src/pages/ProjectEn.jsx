@@ -3,7 +3,43 @@ import {ContactForm, SourceUrl, ValidatedInput} from '../components/Forms.jsx';
 import {PortfolioPreview} from '../components/PortfolioPreview.jsx';
 
 export default function ProjectEn(){
- return <><main className={"wrap project-page"}><div className={"project-heading"}><a className={"textlink"} href={"en.html#offre"}>{"Back to our offer"}</a><p className={"eyebrow"}>{"YOUR PROJECT STARTS HERE"}</p><h1>{"Tell us about your project"}</h1><p className={"intro"}>{"Already know what you have in mind? Tell us about your business and ideas by completing the form."}</p></div><div className={"project-layout"}><ContactForm lang="en" className={"project-form"} action={"https://formsubmit.co/info@eclora.ca"} method={"POST"} aria-describedby={"project-required project-scope project-privacy"} target={"_blank"} rel={"noopener"}>{"\n"}<SourceUrl initialValue="https://eclora.ukf-sylvain.chatgpt.site/project.html"/><input type={"hidden"} name={"_autoresponse"} value={"Hello,\n\nThank you for telling us about your project. We have received your answers. We will review them and get back to you to confirm the next steps or clarify your needs. If additional features or services are needed, we will discuss them with you before you commit.\n\nBest regards,\nThe Éclora team\ninfo@eclora.ca"}/><input type={"text"} name={"_honey"} className={"form-honeypot"} tabIndex={"-1"} autoComplete={"off"} aria-hidden={"true"}/>{"\n"}<input type={"hidden"} name={"_subject"} value={"Éclora — New website project"}/><input type={"hidden"} name={"_template"} value={"table"}/><input type={"hidden"} name={"language"} value={"en"}/>{"\n"}<p id={"project-required"} className={"field-hint"}>{"Fields marked with an * are required."}</p>
+ return <><main className={"wrap project-page"}><div className={"project-heading"}><a className={"textlink"} href={"en.html#offre"}>{"Back to our offer"}</a><p className={"eyebrow"}>{"YOUR PROJECT STARTS HERE"}</p><h1>{"Tell us about your project"}</h1><p className={"intro"}>{"Already know what you have in mind? Tell us about your business and ideas by completing the form."}</p></div><div className={"project-layout"}>
+    <ContactForm 
+        lang="en" 
+        className={"project-form"} 
+        action={"https://formsubmit.co/info@eclora.ca"} 
+        method={"POST"} 
+        aria-describedby={"project-required project-scope project-privacy"} 
+        target={"_blank"} 
+        rel={"noopener"}
+        >
+            {"\n"}<SourceUrl 
+                //initialValue="https://eclora.ukf-sylvain.chatgpt.site/project.html"
+                />
+            {/* <input 
+                type={"hidden"} 
+                name={"_autoresponse"} 
+                value={"Hello,\n\nThank you for telling us about your project. We have received your answers. We will review them and get back to you to confirm the next steps or clarify your needs. If additional features or services are needed, we will discuss them with you before you commit.\n\nBest regards,\nThe Éclora team\ninfo@eclora.ca"}/> */}
+            <input 
+                type={"text"} 
+                name={"_honey"} 
+                className={"form-honeypot"} 
+                tabIndex={"-1"} 
+                autoComplete={"off"} 
+                aria-hidden={"true"}/>{"\n"}
+            {/* <input 
+                type={"hidden"} 
+                name={"_subject"} 
+                value={"Éclora — New website project"}/>
+            <input 
+                type={"hidden"} 
+                name={"_template"} 
+                value={"table"}/> */}
+            <input 
+                type={"hidden"} 
+                name={"language"} 
+                value={"en"}/>{"\n"}
+            <p id={"project-required"} className={"field-hint"}>{"Fields marked with an * are required."}</p>
 <fieldset className={"project-section"}><legend><span>{"01"}</span>{" Your business"}</legend><div className={"project-field"}><label htmlFor={"name"}>{"Your name "}<span aria-hidden={"true"}>{"*"}</span></label><input type={"text"} id={"name"} name={"name"} required={true} autoComplete={"name"} maxLength={"254"}/></div><div className={"project-field"}><label htmlFor={"email"}>{"Your email "}<span aria-hidden={"true"}>{"*"}</span></label><ValidatedInput type={"email"} id={"email"} name={"email"} required={true} autoComplete={"email"} maxLength={"254"} pattern={"[^\\s@]+@[^\\s@]+\\.[^\\s@]+"} inputMode={"email"}/></div><div className={"project-field"}><label htmlFor={"phone"}>{"Phone (optional)"}</label><ValidatedInput type={"tel"} id={"phone"} name={"phone"} autoComplete={"tel"} maxLength={"40"} inputMode={"tel"}/></div><div className={"project-field"}><label htmlFor={"business"}>{"Business name "}<span aria-hidden={"true"}>{"*"}</span></label><input type={"text"} id={"business"} name={"business"} required={true} autoComplete={"organization"} maxLength={"254"}/></div><div className={"project-field"}><label htmlFor={"activity"}>{"Tell us about your business and your clients "}<span aria-hidden={"true"}>{"*"}</span></label><p className={"field-hint"} id={"activity-hint"}>{"What services or products do you offer, and who are they for?"}</p><textarea id={"activity"} name={"activity"} rows={"3"} maxLength={"5000"} required={true} aria-describedby={"activity-hint"} defaultValue={""}/></div></fieldset>
 
 <fieldset className={"project-section"}><legend><span>{"02"}</span>{" Your project"}</legend><div className={"project-field"}><label htmlFor={"goal"}>{"What is your website’s main goal? "}<span aria-hidden={"true"}>{"*"}</span></label><select id={"goal"} name={"goal"} required={true} defaultValue=""><option value={""}>{"Select an answer"}</option><option>{"Present my business and services"}</option><option>{"Receive contact enquiries"}</option><option>{"Allow clients to book appointments"}</option><option>{"Showcase my work or products"}</option><option>{"Sell online"}</option><option>{"Other / to be discussed"}</option></select></div>

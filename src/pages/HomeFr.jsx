@@ -12,6 +12,93 @@ export default function HomeFr(){
 <details><summary>{"Peut-on ajouter une infolettre ?"}</summary><p>{"Oui, en option sur devis. Le service d’envoi et ses éventuels frais sont précisés avant activation. La rédaction et la gestion des campagnes ne sont pas incluses dans le forfait de création."}</p></details>
 <details><summary>{"Qu’est-ce qui est corrigé après livraison ?"}</summary><p>{"Les anomalies liées à notre réalisation, signalées dans les 10 jours ouvrables suivant la livraison : par exemple un bouton ou un formulaire qui ne fonctionne pas comme convenu. Les nouvelles demandes de contenu ou de design sont des modifications payantes."}</p></details>
 </div></section>
-{"\n"}<section id={"contact"} className={"contact-section"}><div className={"wrap contact-grid"}><div><p className={"eyebrow"}>{"LA SUITE COMMENCE AVEC VOTRE IDÉE"}</p><h2>{"Et si on donnait"}<br/>{"de l’éclat à"}<br/><em>{"votre projet ?"}</em></h2><p>{"Présentez-nous votre activité et ce que vous aimeriez voir sur votre site."}</p><p className={"contact-email"}>{"Écrivez-nous : "}<a href={"mailto:info@eclora.ca"}>{"info@eclora.ca"}</a></p><p className={"contact-note"}>{"Décrivez votre projet en ligne : nous vous répondrons par courriel."}</p><a className={"button"} href={"projet.html"}>{"Démarrer mon projet"}</a></div><ContactForm lang="fr" aria-describedby={"form-note"} action={"https://formsubmit.co/info@eclora.ca"} method={"POST"} target={"_blank"} rel={"noopener"}><SourceUrl initialValue="https://eclora.ukf-sylvain.chatgpt.site/index.html"/><input type={"hidden"} name={"_autoresponse"} value={"Bonjour,\n\nMerci pour votre message. Nous avons bien reçu votre demande et nous vous répondrons après en avoir pris connaissance.\n\nÀ bientôt,\nL’équipe Éclora\ninfo@eclora.ca"}/><input type={"text"} name={"_honey"} className={"form-honeypot"} tabIndex={"-1"} autoComplete={"off"} aria-hidden={"true"}/><input type={"hidden"} name={"language"} value={"fr"}/><input type={"hidden"} name={"_template"} value={"table"}/><input type={"hidden"} name={"_subject"} value={"Éclora — Nouvelle demande de contact"}/><label htmlFor={"name"}>{"Votre nom"}</label><input id={"name"} name={"name"} autoComplete={"name"} placeholder={"Prénom et nom"} required={true} maxLength={"150"}/><label htmlFor={"email"}>{"Votre courriel"}</label><ValidatedInput type={"email"} id={"email"} name={"email"} autoComplete={"email"} placeholder={"vous@exemple.ca"} required={true} maxLength={"254"} pattern={"[^\\s@]+@[^\\s@]+\\.[^\\s@]+"} inputMode={"email"}/><label htmlFor={"business"}>{"Votre entreprise"}</label><input id={"business"} name={"business"} autoComplete={"organization"} placeholder={"Nom de votre entreprise"} maxLength={"150"}/><label htmlFor={"phone"}>{"Téléphone (facultatif)"}</label><ValidatedInput id={"phone"} name={"phone"} type={"tel"} autoComplete={"tel"} maxLength={"40"} placeholder={"Votre numéro de téléphone"} inputMode={"tel"}/><label htmlFor={"message"}>{"Parlez-nous de votre projet"}</label><textarea id={"message"} name={"message"} rows={"4"} placeholder={"Votre activité, vos besoins, vos idées…"} required={true} maxLength={"5000"} defaultValue={""}/><button type={"submit"} className={"button"}>{"Envoyer ma demande"}</button><p id={"form-note"} className={"fine"}>{"Votre nom, votre courriel et votre message sont obligatoires. Votre demande est transmise via FormSubmit à info@eclora.ca pour vous répondre. La vérification et la confirmation d’envoi s’ouvrent dans un nouvel onglet."}</p></ContactForm></div></section>
+{"\n"}<section id={"contact"} className={"contact-section"}><div className={"wrap contact-grid"}><div><p className={"eyebrow"}>{"LA SUITE COMMENCE AVEC VOTRE IDÉE"}</p><h2>{"Et si on donnait"}<br/>{"de l’éclat à"}<br/><em>{"votre projet ?"}</em></h2><p>{"Présentez-nous votre activité et ce que vous aimeriez voir sur votre site."}</p><p className={"contact-email"}>{"Écrivez-nous : "}<a href={"mailto:info@eclora.ca"}>{"info@eclora.ca"}</a></p><p className={"contact-note"}>{"Décrivez votre projet en ligne : nous vous répondrons par courriel."}</p><a className={"button"} href={"projet.html"}>{"Démarrer mon projet"}</a></div>
+<ContactForm 
+    lang="fr" 
+    aria-describedby={"form-note"} 
+    //action={"https://formsubmit.co/info@eclora.ca"} 
+    //method={"POST"} target={"_blank"} rel={"noopener"}
+    >
+        <SourceUrl 
+        //initialValue="https://eclora.ukf-sylvain.chatgpt.site/index.html"
+        />
+        <input
+            type="hidden"
+            name="form_type"
+            value="contact"/>
+        {/* <input 
+            type={"hidden"} 
+            name={"_autoresponse"} 
+            value={"Bonjour,\n\nMerci pour votre message. Nous avons bien reçu votre demande et nous vous répondrons après en avoir pris connaissance.\n\nÀ bientôt,\nL’équipe Éclora\ninfo@eclora.ca"}/> */}
+        <input 
+            type={"text"} 
+            name={"_honey"} 
+            className={"form-honeypot"} 
+            tabIndex={"-1"} 
+            autoComplete={"off"} 
+            aria-hidden={"true"}/>
+        <input 
+            type={"hidden"} 
+            name={"language"} 
+            value={"fr"}/>
+        {/* <input 
+            type={"hidden"} 
+            name={"_template"} 
+            value={"table"}/>
+        <input 
+            type={"hidden"} 
+            name={"_subject"} 
+            value={"Éclora — Nouvelle demande de contact"}/> */}
+        <label htmlFor={"name"}>{"Votre nom"}</label>
+        <input 
+            id={"name"} 
+            name={"name"} 
+            autoComplete={"name"} 
+            placeholder={"Prénom et nom"} 
+            required={true} 
+            maxLength={"150"}/>
+        <label htmlFor={"email"}>{"Votre courriel"}</label>
+        <ValidatedInput 
+            type={"email"} 
+            id={"email"} 
+            name={"email"} 
+            autoComplete={"email"} 
+            placeholder={"vous@exemple.ca"} 
+            required={true} 
+            maxLength={"254"} 
+            pattern={"[^\\s@]+@[^\\s@]+\\.[^\\s@]+"} 
+            inputMode={"email"}/>
+        <label htmlFor={"business"}>{"Votre entreprise"}</label>
+        <input 
+            id={"business"} 
+            name={"business"} 
+            autoComplete={"organization"} 
+            placeholder={"Nom de votre entreprise"} 
+            maxLength={"150"}/>
+        <label htmlFor={"phone"}>{"Téléphone (facultatif)"}</label>
+        <ValidatedInput 
+            id={"phone"} 
+            name={"phone"} 
+            type={"tel"} 
+            autoComplete={"tel"} 
+            maxLength={"40"} 
+            placeholder={"Votre numéro de téléphone"} 
+            inputMode={"tel"}/>
+        <label htmlFor={"message"}>{"Parlez-nous de votre projet"}</label>
+        <textarea 
+            id={"message"} 
+            name={"message"} 
+            rows={"4"} 
+            placeholder={"Votre activité, vos besoins, vos idées…"} 
+            required={true} 
+            maxLength={"5000"} 
+            defaultValue={""}/>
+        <button type={"submit"} className={"button"}>{"Envoyer ma demande"}</button>
+        <p id={"form-note"} className={"fine"}>
+          {"Votre nom, votre courriel et votre message sont obligatoires. Votre demande est transmise via FormSubmit à info@eclora.ca pour vous répondre. La vérification et la confirmation d’envoi s’ouvrent dans un nouvel onglet."}
+        </p>
+      </ContactForm>
+    </div>
+  </section>
 </main></>;
 }
