@@ -112,33 +112,46 @@ async function sendEmail(
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const origin = request.headers.get("Origin") || "";
+    const url = new URL(request.url);
 
     const headers: Record<string, string> = {
-      "Access-Control-Allow-Origin": origin,
       "Access-Control-Allow-Methods": "POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
       "Vary": "Origin",
     };
 
-    if (!ALLOWED_ORIGINS.has(origin)) {
-      return json({ error: "Forbidden" }, 403, {});
-    }
-
+    // Handle CORS preflight requests
     if (request.method === "OPTIONS") {
+      if (
+        url.pathname !== "/api/contact" ||
+        !ALLOWED_ORIGINS.has(origin)
+      ) {
+        return json({ error: "Forbidden" }, 403, {});
+      }
+
+      headers["Access-Control-Allow-Origin"] = origin;
+
       return new Response(null, {
         status: 204,
         headers,
       });
     }
 
-    const url = new URL(request.url);
-
+    // Only accept POST requests to the contact endpoint
     if (
       url.pathname !== "/api/contact" ||
       request.method !== "POST"
     ) {
-      return json({ error: "Not found" }, 404, headers);
+      return json({ error: "Not found" }, 404, {});
     }
+
+    // Validate the origin for contact submissions
+    if (!ALLOWED_ORIGINS.has(origin)) {
+      return json({ error: "Forbidden" }, 403, {});
+    }
+
+    headers["Access-Control-Allow-Origin"] = origin;
+
 
     const contentLength = Number(
       request.headers.get("Content-Length") || 0
