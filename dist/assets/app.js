@@ -10215,17 +10215,8 @@ function le() {
 				] }), /* @__PURE__ */ (0, x.jsxs)(ie, {
 					lang: "en",
 					"aria-describedby": "form-note",
-					action: "https://formsubmit.co/info@eclora.ca",
-					method: "POST",
-					target: "_blank",
-					rel: "noopener",
 					children: [
-						/* @__PURE__ */ (0, x.jsx)(ae, { initialValue: "https://eclora.ukf-sylvain.chatgpt.site/en.html" }),
-						/* @__PURE__ */ (0, x.jsx)("input", {
-							type: "hidden",
-							name: "_autoresponse",
-							value: "Hello,\n\nThank you for your message. We have received your enquiry and will get back to you after reviewing it.\n\nBest regards,\nThe Éclora team\ninfo@eclora.ca"
-						}),
+						/* @__PURE__ */ (0, x.jsx)(ae, {}),
 						/* @__PURE__ */ (0, x.jsx)("input", {
 							type: "text",
 							name: "_honey",
@@ -10238,16 +10229,6 @@ function le() {
 							type: "hidden",
 							name: "language",
 							value: "en"
-						}),
-						/* @__PURE__ */ (0, x.jsx)("input", {
-							type: "hidden",
-							name: "_template",
-							value: "table"
-						}),
-						/* @__PURE__ */ (0, x.jsx)("input", {
-							type: "hidden",
-							name: "_subject",
-							value: "Éclora — New website enquiry"
 						}),
 						/* @__PURE__ */ (0, x.jsx)("label", {
 							htmlFor: "name",
@@ -10827,12 +10808,7 @@ function de() {
 				rel: "noopener",
 				children: [
 					"\n",
-					/* @__PURE__ */ (0, x.jsx)(ae, { initialValue: "https://eclora.ukf-sylvain.chatgpt.site/project.html" }),
-					/* @__PURE__ */ (0, x.jsx)("input", {
-						type: "hidden",
-						name: "_autoresponse",
-						value: "Hello,\n\nThank you for telling us about your project. We have received your answers. We will review them and get back to you to confirm the next steps or clarify your needs. If additional features or services are needed, we will discuss them with you before you commit.\n\nBest regards,\nThe Éclora team\ninfo@eclora.ca"
-					}),
+					/* @__PURE__ */ (0, x.jsx)(ae, {}),
 					/* @__PURE__ */ (0, x.jsx)("input", {
 						type: "text",
 						name: "_honey",
@@ -10842,16 +10818,6 @@ function de() {
 						"aria-hidden": "true"
 					}),
 					"\n",
-					/* @__PURE__ */ (0, x.jsx)("input", {
-						type: "hidden",
-						name: "_subject",
-						value: "Éclora — New website project"
-					}),
-					/* @__PURE__ */ (0, x.jsx)("input", {
-						type: "hidden",
-						name: "_template",
-						value: "table"
-					}),
 					/* @__PURE__ */ (0, x.jsx)("input", {
 						type: "hidden",
 						name: "language",
