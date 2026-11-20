@@ -1,4 +1,3 @@
-
 interface Env {
   RESEND_API_KEY: string;
   CONTACT_TO: string;
@@ -17,11 +16,7 @@ const ALLOWED_ORIGINS = new Set([
 
 const MAX_BODY_SIZE = 20_000;
 
-function json(
-  data: unknown,
-  status: number,
-  headers: Record<string, string>
-) {
+function json(data: unknown, status: number, headers: Record<string, string>) {
   return Response.json(data, { status, headers });
 }
 
@@ -50,10 +45,10 @@ function validPayload(value: unknown): value is Payload {
     }
 
     if (Array.isArray(field)) {
-      return field.length <= 20 &&
-        field.every(
-          item => typeof item === "string" && item.length <= 5000
-        );
+      return (
+        field.length <= 20 &&
+        field.every((item) => typeof item === "string" && item.length <= 5000)
+      );
     }
 
     return false;
@@ -87,19 +82,16 @@ function labelField(key: string): string {
 
 async function sendEmail(
   env: Env,
-  email: Record<string, unknown>
+  email: Record<string, unknown>,
 ): Promise<boolean> {
-  const response = await fetch(
-    "https://api.resend.com/emails",
-    {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${env.RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(email),
-    }
-  );
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(email),
+  });
 
   if (!response.ok) {
     console.error(`Resend returned status ${response.status}`);
@@ -117,15 +109,12 @@ export default {
     const headers: Record<string, string> = {
       "Access-Control-Allow-Methods": "POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
-      "Vary": "Origin",
+      Vary: "Origin",
     };
 
     // Handle CORS preflight requests
     if (request.method === "OPTIONS") {
-      if (
-        url.pathname !== "/api/contact" ||
-        !ALLOWED_ORIGINS.has(origin)
-      ) {
+      if (url.pathname !== "/api/contact" || !ALLOWED_ORIGINS.has(origin)) {
         return json({ error: "Forbidden" }, 403, {});
       }
 
@@ -138,10 +127,7 @@ export default {
     }
 
     // Only accept POST requests to the contact endpoint
-    if (
-      url.pathname !== "/api/contact" ||
-      request.method !== "POST"
-    ) {
+    if (url.pathname !== "/api/contact" || request.method !== "POST") {
       return json({ error: "Not found" }, 404, {});
     }
 
@@ -152,10 +138,7 @@ export default {
 
     headers["Access-Control-Allow-Origin"] = origin;
 
-
-    const contentLength = Number(
-      request.headers.get("Content-Length") || 0
-    );
+    const contentLength = Number(request.headers.get("Content-Length") || 0);
 
     if (contentLength > MAX_BODY_SIZE) {
       return json({ error: "Request too large" }, 413, headers);
@@ -187,9 +170,7 @@ export default {
     const message = getText(payload.message);
     const activity = getText(payload.activity);
 
-    const language = getText(payload.language) === "fr"
-      ? "fr"
-      : "en";
+    const language = getText(payload.language) === "fr" ? "fr" : "en";
 
     const formType = getText(payload.form_type);
 
@@ -213,22 +194,19 @@ export default {
 
     const safeName = name.replace(/[\r\n]+/g, " ");
 
-    const subject = language === "fr"
-      ? formType === "project"
-        ? `Éclora — Nouveau projet web de ${safeName}`
-        : `Éclora — Nouvelle demande de contact de ${safeName}`
-      : formType === "project"
-        ? `Éclora — New website project from ${safeName}`
-        : `Éclora — New contact enquiry from ${safeName}`;
+    const subject =
+      language === "fr"
+        ? formType === "project"
+          ? `Éclora — Nouveau projet web de ${safeName}`
+          : `Éclora — Nouvelle demande de contact de ${safeName}`
+        : formType === "project"
+          ? `Éclora — New website project from ${safeName}`
+          : `Éclora — New contact enquiry from ${safeName}`;
 
     const details = Object.entries(payload)
-      .filter(([key]) =>
-        !["_honey", "language", "form_type"].includes(key)
-      )
+      .filter(([key]) => !["_honey", "language", "form_type"].includes(key))
       .map(([key, value]) => {
-        const formatted = Array.isArray(value)
-          ? value.join(", ")
-          : value;
+        const formatted = Array.isArray(value) ? value.join(", ") : value;
 
         return `${labelField(key)}:\n${formatted || "(Not provided)"}`;
       })
@@ -243,17 +221,14 @@ export default {
     });
 
     if (!notificationSent) {
-      return json(
-        { error: "Unable to deliver your message" },
-        502,
-        headers
-      );
+      return json({ error: "Unable to deliver your message" }, 502, headers);
     }
 
-    const confirmation = language === "fr"
-      ? {
-          subject: "Nous avons bien reçu votre demande !",
-          text: `Bonjour ${safeName},
+    const confirmation =
+      language === "fr"
+        ? {
+            subject: "Nous avons bien reçu votre demande !",
+            text: `Bonjour ${safeName},
 
 Merci de nous avoir contactés.
 
@@ -263,10 +238,10 @@ Nous avons bien reçu votre demande et nous vous répondrons après en avoir pri
 
 L'équipe Éclora
 info@eclora.ca`,
-        }
-      : {
-          subject: "We received your enquiry!",
-          text: `Hello ${safeName},
+          }
+        : {
+            subject: "We received your enquiry!",
+            text: `Hello ${safeName},
 
 Thank you for contacting Eclora.
 
@@ -276,7 +251,7 @@ Best regards,
 
 The Eclora Team
 info@eclora.ca`,
-        };
+          };
 
     const confirmationSent = await sendEmail(env, {
       from: "Éclora <website@send.eclora.ca>",
@@ -295,7 +270,7 @@ info@eclora.ca`,
         confirmationSent,
       },
       200,
-      headers
+      headers,
     );
   },
 };

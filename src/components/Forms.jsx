@@ -1,49 +1,41 @@
-
 import React, {
   useContext,
   createContext,
   useEffect,
   useRef,
-  useState
-} from 'react';
+  useState,
+} from "react";
 
-import {
-  validContactEmail,
-  validContactPhone
-} from '../lib/validation.mjs';
+import { validContactEmail, validContactPhone } from "../lib/validation.mjs";
 
-const FormLanguage = createContext('fr');
+const FormLanguage = createContext("fr");
 
 function getContactApiUrl() {
   const hostname = window.location.hostname;
 
-  if (hostname === 'localhost' || hostname === '127.0.0.1') {
+  if (hostname === "localhost" || hostname === "127.0.0.1") {
     return `http://${hostname}:8787/api/contact`;
   }
 
-  return 'https://api.eclora.ca/api/contact';
+  return "https://api.eclora.ca/api/contact";
 }
 
-export function ContactForm({
-  lang = 'fr',
-  children,
-  ...props
-}) {
-  const [status, setStatus] = useState('idle');
+export function ContactForm({ lang = "fr", children, ...props }) {
+  const [status, setStatus] = useState("idle");
   const busy = useRef(false);
 
-  const en = lang === 'en';
+  const en = lang === "en";
 
   const messages = en
     ? {
-        loading: 'Sending your message...',
-        success: 'Thank you! Your message has been sent.',
-        error: 'Unable to send your message. Please try again.'
+        loading: "Sending your message...",
+        success: "Thank you! Your message has been sent.",
+        error: "Unable to send your message. Please try again.",
       }
     : {
-        loading: 'Envoi de votre message...',
-        success: 'Merci ! Votre message a été envoyé.',
-        error: 'Impossible d’envoyer votre message. Veuillez réessayer.'
+        loading: "Envoi de votre message...",
+        success: "Merci ! Votre message a été envoyé.",
+        error: "Impossible d’envoyer votre message. Veuillez réessayer.",
       };
 
   async function handleSubmit(event) {
@@ -56,13 +48,11 @@ export function ContactForm({
     }
 
     busy.current = true;
-    setStatus('loading');
+    setStatus("loading");
 
-    const buttons = [
-      ...form.querySelectorAll('button[type="submit"]')
-    ];
+    const buttons = [...form.querySelectorAll('button[type="submit"]')];
 
-    buttons.forEach(button => {
+    buttons.forEach((button) => {
       button.disabled = true;
     });
 
@@ -83,30 +73,28 @@ export function ContactForm({
 
     try {
       const response = await fetch(getContactApiUrl(), {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(payload),
       });
 
       const result = await response.json();
 
       if (!response.ok || !result.success) {
-        throw new Error('Submission failed');
+        throw new Error("Submission failed");
       }
 
       form.reset();
-      setStatus('success');
-
+      setStatus("success");
     } catch (error) {
-      console.error('Contact form submission failed:', error);
-      setStatus('error');
-
+      console.error("Contact form submission failed:", error);
+      setStatus("error");
     } finally {
       busy.current = false;
 
-      buttons.forEach(button => {
+      buttons.forEach((button) => {
         button.disabled = false;
       });
     }
@@ -118,14 +106,14 @@ export function ContactForm({
         {children}
 
         <div aria-live="polite" role="status">
-          {status !== 'idle' && (
+          {status !== "idle" && (
             <p
               className={
-                status === 'success'
-                  ? 'contact-success'
-                  : status === 'error'
-                    ? 'contact-error'
-                    : 'contact-status'
+                status === "success"
+                  ? "contact-success"
+                  : status === "error"
+                    ? "contact-error"
+                    : "contact-status"
               }
             >
               {messages[status]}
@@ -138,64 +126,53 @@ export function ContactForm({
 }
 
 export function SourceUrl() {
-  const [url, setUrl] = useState('');
+  const [url, setUrl] = useState("");
 
   useEffect(() => {
     const source = new URL(window.location.href);
 
-    source.hash = '';
-    source.search = '';
+    source.hash = "";
+    source.search = "";
 
     setUrl(source.href);
   }, []);
 
-  return (
-    <input
-      type="hidden"
-      name="_url"
-      value={url}
-    />
-  );
+  return <input type="hidden" name="_url" value={url} />;
 }
 
 export function ValidatedInput(props) {
   const lang = useContext(FormLanguage);
 
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const ref = useRef(null);
   const touched = useRef(false);
 
-  const en = lang === 'en';
+  const en = lang === "en";
 
   const messages = en
     ? {
-        required: 'Please enter your email address.',
-        email: 'Enter a valid email address, for example name@example.ca.',
-        phone: 'Enter a 10-digit Canadian or US number, or an international number starting with +. Example: 514 555-0123.'
+        required: "Please enter your email address.",
+        email: "Enter a valid email address, for example name@example.ca.",
+        phone:
+          "Enter a 10-digit Canadian or US number, or an international number starting with +. Example: 514 555-0123.",
       }
     : {
-        required: 'Veuillez saisir votre adresse courriel.',
-        email: 'Entrez une adresse courriel valide, par exemple nom@exemple.ca.',
-        phone: 'Entrez un numéro canadien ou américain à 10 chiffres, ou un numéro international commençant par +. Exemple : 514 555-0123.'
+        required: "Veuillez saisir votre adresse courriel.",
+        email:
+          "Entrez une adresse courriel valide, par exemple nom@exemple.ca.",
+        phone:
+          "Entrez un numéro canadien ou américain à 10 chiffres, ou un numéro international commençant par +. Exemple : 514 555-0123.",
       };
 
   function validate(field, show) {
     const value = field.value.trim();
-    let message = '';
+    let message = "";
 
     if (!value && field.required) {
       message = messages.required;
-    } else if (
-      value &&
-      props.type === 'email' &&
-      !validContactEmail(value)
-    ) {
+    } else if (value && props.type === "email" && !validContactEmail(value)) {
       message = messages.email;
-    } else if (
-      value &&
-      props.type === 'tel' &&
-      !validContactPhone(value)
-    ) {
+    } else if (value && props.type === "tel" && !validContactPhone(value)) {
       message = messages.phone;
     }
 
@@ -212,44 +189,40 @@ export function ValidatedInput(props) {
     if (!field) return;
 
     const reset = () => {
-      field.setCustomValidity('');
+      field.setCustomValidity("");
       touched.current = false;
-      setError('');
+      setError("");
     };
 
     const form = field.form;
 
-    form?.addEventListener('reset', reset);
+    form?.addEventListener("reset", reset);
 
     return () => {
-      form?.removeEventListener('reset', reset);
+      form?.removeEventListener("reset", reset);
     };
   }, []);
 
-  const errorId = props.id + '-validation';
+  const errorId = props.id + "-validation";
 
   return (
     <>
       <input
         {...props}
         ref={ref}
-        aria-invalid={error ? 'true' : undefined}
-        aria-describedby={[
-          props['aria-describedby'],
-          errorId
-        ].filter(Boolean).join(' ')}
-        onChange={event =>
-          validate(event.currentTarget, touched.current)
-        }
-        onBlur={event => {
-          event.currentTarget.value =
-            event.currentTarget.value.trim();
+        aria-invalid={error ? "true" : undefined}
+        aria-describedby={[props["aria-describedby"], errorId]
+          .filter(Boolean)
+          .join(" ")}
+        onChange={(event) => validate(event.currentTarget, touched.current)}
+        onBlur={(event) => {
+          event.currentTarget.value = event.currentTarget.value.trim();
 
           touched.current = true;
 
           validate(event.currentTarget, true);
         }}
-        onInvalid={event => {
+        onInvalid={(event) => {
           touched.current = true;
           validate(event.currentTarget, true);
         }}
