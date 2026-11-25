@@ -12,13 +12,17 @@
     "preview": "node scripts/serve.mjs",
     "test": "node --test tests/*.test.mjs",
     "worker:dev": "wrangler dev",
-    "worker:deploy": "wrangler deploy"
+    "worker:deploy": "wrangler deploy",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:report": "playwright show-report"
   },
   "dependencies": {
     "react": "19.3.1",
     "react-dom": "19.3.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.1",
     "@types/node": "^26.6.6",
     "@vitejs/plugin-react": "^6.2.1",
     "esbuild": "0.28.2",
