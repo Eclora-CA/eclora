@@ -401,6 +401,23 @@ export default function ProjectEn() {
                   defaultValue={""}
                 />
               </div>
+              <div className="project-field">
+                <label htmlFor="promo-code">Promo code (optional)</label>
+                <p className="field-hint" id="promo-code-hint">
+                  If you have a promo code, enter it here. We will check it when
+                  reviewing your project.
+                </p>
+                <input
+                  type="text"
+                  id="promo-code"
+                  name="promo_code"
+                  maxLength={64}
+                  autoComplete="off"
+                  autoCapitalize="characters"
+                  spellCheck={false}
+                  aria-describedby="promo-code-hint"
+                />
+              </div>
             </fieldset>
             <div className={"project-terms"}>
               <p id={"project-scope"}>

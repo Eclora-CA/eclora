@@ -9452,8 +9452,8 @@ function ce() {
 					/* @__PURE__ */ (0, x.jsxs)("div", {
 						className: "price-tag",
 						children: [
-							/* @__PURE__ */ (0, x.jsx)("span", { children: "OFFRE DE LANCEMENT" }),
-							/* @__PURE__ */ (0, x.jsx)("strong", { children: "250 $" }),
+							/* @__PURE__ */ (0, x.jsx)("span", { children: "SITE VITRINE" }),
+							/* @__PURE__ */ (0, x.jsx)("strong", { children: "357,14 $" }),
 							/* @__PURE__ */ (0, x.jsx)("small", { children: "Création du site · frais tiers en supplément" })
 						]
 					}),
@@ -9531,31 +9531,19 @@ function ce() {
 					}), /* @__PURE__ */ (0, x.jsxs)("aside", {
 						className: "pricing",
 						children: [
-							/* @__PURE__ */ (0, x.jsx)("div", {
-								className: "pill",
-								children: "RABAIS DE LANCEMENT · 30 %"
-							}),
 							/* @__PURE__ */ (0, x.jsx)("p", {
 								className: "price-caption",
 								children: "Votre site vitrine professionnel"
 							}),
-							/* @__PURE__ */ (0, x.jsx)("div", {
-								className: "old-price",
-								children: "357,14 $ CA"
-							}),
 							/* @__PURE__ */ (0, x.jsxs)("div", {
 								className: "big-price",
-								children: ["250", /* @__PURE__ */ (0, x.jsx)("span", { children: ",00 $" })]
-							}),
-							/* @__PURE__ */ (0, x.jsx)("p", {
-								className: "discount",
-								children: "Vous économisez 107,14 $ sur la création."
+								children: ["357", /* @__PURE__ */ (0, x.jsx)("span", { children: ",14 $" })]
 							}),
 							/* @__PURE__ */ (0, x.jsxs)("div", {
 								className: "hosting-price",
 								children: [
 									/* @__PURE__ */ (0, x.jsx)("strong", { children: "Hébergement : 60 $ par an" }),
-									/* @__PURE__ */ (0, x.jsx)("b", { children: "Total au lancement : 310 $" }),
+									/* @__PURE__ */ (0, x.jsx)("b", { children: "Création + hébergement : 417,14 $" }),
 									/* @__PURE__ */ (0, x.jsx)("small", { children: "Création + hébergement, hors domaine et taxes applicables." })
 								]
 							}),
@@ -9565,13 +9553,13 @@ function ce() {
 								children: "Démarrer mon projet"
 							}),
 							/* @__PURE__ */ (0, x.jsxs)("ul", { children: [
-								/* @__PURE__ */ (0, x.jsx)("li", { children: "125 $ à la commande, 125 $ avant mise en ligne" }),
+								/* @__PURE__ */ (0, x.jsx)("li", { children: "178,57 $ à la commande, 178,57 $ avant mise en ligne" }),
 								/* @__PURE__ */ (0, x.jsx)("li", { children: "Sans abonnement de maintenance obligatoire" }),
 								/* @__PURE__ */ (0, x.jsx)("li", { children: "10 jours ouvrables pour signaler les anomalies liées à la réalisation" })
 							] }),
 							/* @__PURE__ */ (0, x.jsx)("p", {
 								className: "fine",
-								children: "Hébergement géré par Éclora : 60 $ par an. Nom de domaine et services tiers en supplément. Taxes applicables en supplément, le cas échéant. Prix après rabais arrondi au cent."
+								children: "Hébergement géré par Éclora : 60 $ par an. Nom de domaine et services tiers en supplément. Taxes applicables en supplément, le cas échéant."
 							})
 						]
 					})]
@@ -9606,9 +9594,9 @@ function ce() {
 						] }),
 						/* @__PURE__ */ (0, x.jsx)("p", { children: "Découvrez un site conçu pour présenter une expertise et faciliter la prise de contact." })
 					]
-				}), /* @__PURE__ */ (0, x.jsx)("div", {
+				}), /* @__PURE__ */ (0, x.jsxs)("div", {
 					className: "portfolio-grid",
-					children: /* @__PURE__ */ (0, x.jsxs)("article", {
+					children: [/* @__PURE__ */ (0, x.jsxs)("article", {
 						className: "project",
 						children: [/* @__PURE__ */ (0, x.jsx)(se, {
 							lang: "fr",
@@ -9636,7 +9624,35 @@ function ce() {
 								})
 							]
 						})]
-					})
+					}), /* @__PURE__ */ (0, x.jsxs)("article", {
+						className: "project",
+						children: [/* @__PURE__ */ (0, x.jsx)(se, {
+							lang: "fr",
+							src: "https://www.pamelagoutondji.ca",
+							title: "Aperçu du site de Paméla Goutondji"
+						}), /* @__PURE__ */ (0, x.jsxs)("div", {
+							className: "project-info",
+							children: [
+								/* @__PURE__ */ (0, x.jsx)("p", {
+									className: "eyebrow",
+									children: "Psychothérapie"
+								}),
+								/* @__PURE__ */ (0, x.jsx)("h3", { children: "Paméla Goutondji" }),
+								/* @__PURE__ */ (0, x.jsx)("p", { children: "Un site vitrine bilingue qui présente les services de psychothérapie de Paméla Goutondji et facilite la prise de rendez-vous." }),
+								/* @__PURE__ */ (0, x.jsxs)("div", {
+									className: "project-tags",
+									children: [/* @__PURE__ */ (0, x.jsx)("span", { children: "Site vitrine" }), /* @__PURE__ */ (0, x.jsx)("span", { children: "Bilingue" })]
+								}),
+								/* @__PURE__ */ (0, x.jsx)("a", {
+									href: "https://www.pamelagoutondji.ca",
+									className: "button",
+									target: "_blank",
+									rel: "noopener noreferrer",
+									children: "Voir le site"
+								})
+							]
+						})]
+					})]
 				})]
 			})
 		}),
@@ -9935,8 +9951,8 @@ function le() {
 					/* @__PURE__ */ (0, x.jsxs)("div", {
 						className: "price-tag",
 						children: [
-							/* @__PURE__ */ (0, x.jsx)("span", { children: "LAUNCH OFFER" }),
-							/* @__PURE__ */ (0, x.jsx)("strong", { children: "$250" }),
+							/* @__PURE__ */ (0, x.jsx)("span", { children: "BUSINESS WEBSITE" }),
+							/* @__PURE__ */ (0, x.jsx)("strong", { children: "$357.14" }),
 							/* @__PURE__ */ (0, x.jsx)("small", { children: "Website creation · third-party fees extra" })
 						]
 					}),
@@ -10014,31 +10030,19 @@ function le() {
 					}), /* @__PURE__ */ (0, x.jsxs)("aside", {
 						className: "pricing",
 						children: [
-							/* @__PURE__ */ (0, x.jsx)("div", {
-								className: "pill",
-								children: "LAUNCH DISCOUNT · 30%"
-							}),
 							/* @__PURE__ */ (0, x.jsx)("p", {
 								className: "price-caption",
 								children: "Your professional business website"
 							}),
-							/* @__PURE__ */ (0, x.jsx)("div", {
-								className: "old-price",
-								children: "CAD $357.14"
-							}),
 							/* @__PURE__ */ (0, x.jsxs)("div", {
 								className: "big-price",
-								children: ["250", /* @__PURE__ */ (0, x.jsx)("span", { children: ".00 CAD" })]
-							}),
-							/* @__PURE__ */ (0, x.jsx)("p", {
-								className: "discount",
-								children: "Save $107.14 on website creation."
+								children: ["357", /* @__PURE__ */ (0, x.jsx)("span", { children: ".14 CAD" })]
 							}),
 							/* @__PURE__ */ (0, x.jsxs)("div", {
 								className: "hosting-price",
 								children: [
 									/* @__PURE__ */ (0, x.jsx)("strong", { children: "Hosting: $60 per year" }),
-									/* @__PURE__ */ (0, x.jsx)("b", { children: "Launch total: $310" }),
+									/* @__PURE__ */ (0, x.jsx)("b", { children: "Creation + hosting: $417.14" }),
 									/* @__PURE__ */ (0, x.jsx)("small", { children: "Creation + hosting, excluding the domain and applicable taxes." })
 								]
 							}),
@@ -10048,13 +10052,13 @@ function le() {
 								children: "Start my project"
 							}),
 							/* @__PURE__ */ (0, x.jsxs)("ul", { children: [
-								/* @__PURE__ */ (0, x.jsx)("li", { children: "$125 when you order, $125 before launch" }),
+								/* @__PURE__ */ (0, x.jsx)("li", { children: "$178.57 when you order, $178.57 before launch" }),
 								/* @__PURE__ */ (0, x.jsx)("li", { children: "No mandatory maintenance subscription" }),
 								/* @__PURE__ */ (0, x.jsx)("li", { children: "10 business days to report issues with our work" })
 							] }),
 							/* @__PURE__ */ (0, x.jsx)("p", {
 								className: "fine",
-								children: "Hosting managed by Éclora: $60 per year. Domain name and third-party services are extra. Applicable taxes are extra, where required. Discounted price rounded to the nearest cent. All prices are in Canadian dollars."
+								children: "Hosting managed by Éclora: $60 per year. Domain name and third-party services are extra. Applicable taxes are extra, where required. All prices are in Canadian dollars."
 							})
 						]
 					})]
@@ -10089,9 +10093,9 @@ function le() {
 						] }),
 						/* @__PURE__ */ (0, x.jsx)("p", { children: "Explore a website designed to showcase expertise and make it easy to get in touch." })
 					]
-				}), /* @__PURE__ */ (0, x.jsx)("div", {
+				}), /* @__PURE__ */ (0, x.jsxs)("div", {
 					className: "portfolio-grid",
-					children: /* @__PURE__ */ (0, x.jsxs)("article", {
+					children: [/* @__PURE__ */ (0, x.jsxs)("article", {
 						className: "project",
 						children: [/* @__PURE__ */ (0, x.jsx)(se, {
 							lang: "en",
@@ -10119,7 +10123,35 @@ function le() {
 								})
 							]
 						})]
-					})
+					}), /* @__PURE__ */ (0, x.jsxs)("article", {
+						className: "project",
+						children: [/* @__PURE__ */ (0, x.jsx)(se, {
+							lang: "en",
+							src: "https://www.pamelagoutondji.ca",
+							title: "Preview of Paméla Goutondji’s website"
+						}), /* @__PURE__ */ (0, x.jsxs)("div", {
+							className: "project-info",
+							children: [
+								/* @__PURE__ */ (0, x.jsx)("p", {
+									className: "eyebrow",
+									children: "Psychotherapy"
+								}),
+								/* @__PURE__ */ (0, x.jsx)("h3", { children: "Paméla Goutondji" }),
+								/* @__PURE__ */ (0, x.jsx)("p", { children: "A bilingual website introducing Paméla Goutondji’s psychotherapy services and making it easy to book an appointment." }),
+								/* @__PURE__ */ (0, x.jsxs)("div", {
+									className: "project-tags",
+									children: [/* @__PURE__ */ (0, x.jsx)("span", { children: "Business website" }), /* @__PURE__ */ (0, x.jsx)("span", { children: "Bilingual" })]
+								}),
+								/* @__PURE__ */ (0, x.jsx)("a", {
+									href: "https://www.pamelagoutondji.ca",
+									className: "button",
+									target: "_blank",
+									rel: "noopener noreferrer",
+									children: "Visit website"
+								})
+							]
+						})]
+					})]
 				})]
 			})
 		}),
@@ -10739,6 +10771,30 @@ function ue() {
 									maxLength: "5000",
 									defaultValue: ""
 								})]
+							}),
+							/* @__PURE__ */ (0, x.jsxs)("div", {
+								className: "project-field",
+								children: [
+									/* @__PURE__ */ (0, x.jsx)("label", {
+										htmlFor: "promo-code",
+										children: "Code promo (facultatif)"
+									}),
+									/* @__PURE__ */ (0, x.jsx)("p", {
+										className: "field-hint",
+										id: "promo-code-hint",
+										children: "Si vous avez un code promo, indiquez-le ici. Nous le vérifierons lors de l’examen de votre projet."
+									}),
+									/* @__PURE__ */ (0, x.jsx)("input", {
+										type: "text",
+										id: "promo-code",
+										name: "promo_code",
+										maxLength: 64,
+										autoComplete: "off",
+										autoCapitalize: "characters",
+										spellCheck: !1,
+										"aria-describedby": "promo-code-hint"
+									})
+								]
 							})
 						]
 					}),
@@ -11202,6 +11258,30 @@ function de() {
 									maxLength: "5000",
 									defaultValue: ""
 								})]
+							}),
+							/* @__PURE__ */ (0, x.jsxs)("div", {
+								className: "project-field",
+								children: [
+									/* @__PURE__ */ (0, x.jsx)("label", {
+										htmlFor: "promo-code",
+										children: "Promo code (optional)"
+									}),
+									/* @__PURE__ */ (0, x.jsx)("p", {
+										className: "field-hint",
+										id: "promo-code-hint",
+										children: "If you have a promo code, enter it here. We will check it when reviewing your project."
+									}),
+									/* @__PURE__ */ (0, x.jsx)("input", {
+										type: "text",
+										id: "promo-code",
+										name: "promo_code",
+										maxLength: 64,
+										autoComplete: "off",
+										autoCapitalize: "characters",
+										spellCheck: !1,
+										"aria-describedby": "promo-code-hint"
+									})
+								]
 							})
 						]
 					}),

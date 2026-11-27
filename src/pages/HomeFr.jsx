@@ -80,8 +80,8 @@ export default function HomeFr() {
               </div>
             </div>
             <div className={"price-tag"}>
-              <span>{"OFFRE DE LANCEMENT"}</span>
-              <strong>{"250 $"}</strong>
+              <span>{"SITE VITRINE"}</span>
+              <strong>{"357,14 $"}</strong>
               <small>{"Création du site · frais tiers en supplément"}</small>
             </div>
             <div className={"mobile-card"}>
@@ -165,21 +165,16 @@ export default function HomeFr() {
               </div>
             </div>
             <aside className={"pricing"}>
-              <div className={"pill"}>{"RABAIS DE LANCEMENT · 30 %"}</div>
               <p className={"price-caption"}>
                 {"Votre site vitrine professionnel"}
               </p>
-              <div className={"old-price"}>{"357,14 $ CA"}</div>
               <div className={"big-price"}>
-                {"250"}
-                <span>{",00 $"}</span>
+                {"357"}
+                <span>{",14 $"}</span>
               </div>
-              <p className={"discount"}>
-                {"Vous économisez 107,14 $ sur la création."}
-              </p>
               <div className={"hosting-price"}>
                 <strong>{"Hébergement : 60 $ par an"}</strong>
-                <b>{"Total au lancement : 310 $"}</b>
+                <b>{"Création + hébergement : 417,14 $"}</b>
                 <small>
                   {"Création + hébergement, hors domaine et taxes applicables."}
                 </small>
@@ -188,7 +183,9 @@ export default function HomeFr() {
                 {"Démarrer mon projet"}
               </a>
               <ul>
-                <li>{"125 $ à la commande, 125 $ avant mise en ligne"}</li>
+                <li>
+                  {"178,57 $ à la commande, 178,57 $ avant mise en ligne"}
+                </li>
                 <li>{"Sans abonnement de maintenance obligatoire"}</li>
                 <li>
                   {
@@ -198,7 +195,7 @@ export default function HomeFr() {
               </ul>
               <p className={"fine"}>
                 {
-                  "Hébergement géré par Éclora : 60 $ par an. Nom de domaine et services tiers en supplément. Taxes applicables en supplément, le cas échéant. Prix après rabais arrondi au cent."
+                  "Hébergement géré par Éclora : 60 $ par an. Nom de domaine et services tiers en supplément. Taxes applicables en supplément, le cas échéant."
                 }
               </p>
             </aside>
@@ -268,6 +265,34 @@ export default function HomeFr() {
                     rel={"noopener noreferrer"}
                   >
                     {"Voir le site"}
+                  </a>
+                </div>
+              </article>
+              <article className="project">
+                <PortfolioPreview
+                  lang="fr"
+                  src="https://www.pamelagoutondji.ca"
+                  title="Aperçu du site de Paméla Goutondji"
+                />
+                <div className="project-info">
+                  <p className="eyebrow">Psychothérapie</p>
+                  <h3>Paméla Goutondji</h3>
+                  <p>
+                    Un site vitrine bilingue qui présente les services de
+                    psychothérapie de Paméla Goutondji et facilite la prise de
+                    rendez-vous.
+                  </p>
+                  <div className="project-tags">
+                    <span>Site vitrine</span>
+                    <span>Bilingue</span>
+                  </div>
+                  <a
+                    href="https://www.pamelagoutondji.ca"
+                    className="button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Voir le site
                   </a>
                 </div>
               </article>

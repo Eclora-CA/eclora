@@ -404,6 +404,23 @@ export default function ProjectFr() {
                   defaultValue={""}
                 />
               </div>
+              <div className="project-field">
+                <label htmlFor="promo-code">Code promo (facultatif)</label>
+                <p className="field-hint" id="promo-code-hint">
+                  Si vous avez un code promo, indiquez-le ici. Nous le
+                  vérifierons lors de l’examen de votre projet.
+                </p>
+                <input
+                  type="text"
+                  id="promo-code"
+                  name="promo_code"
+                  maxLength={64}
+                  autoComplete="off"
+                  autoCapitalize="characters"
+                  spellCheck={false}
+                  aria-describedby="promo-code-hint"
+                />
+              </div>
             </fieldset>
             <div className={"project-terms"}>
               <p id={"project-scope"}>

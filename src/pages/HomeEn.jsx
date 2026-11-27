@@ -78,8 +78,8 @@ export default function HomeEn() {
               </div>
             </div>
             <div className={"price-tag"}>
-              <span>{"LAUNCH OFFER"}</span>
-              <strong>{"$250"}</strong>
+              <span>{"BUSINESS WEBSITE"}</span>
+              <strong>{"$357.14"}</strong>
               <small>{"Website creation · third-party fees extra"}</small>
             </div>
             <div className={"mobile-card"}>
@@ -165,21 +165,16 @@ export default function HomeEn() {
               </div>
             </div>
             <aside className={"pricing"}>
-              <div className={"pill"}>{"LAUNCH DISCOUNT · 30%"}</div>
               <p className={"price-caption"}>
                 {"Your professional business website"}
               </p>
-              <div className={"old-price"}>{"CAD $357.14"}</div>
               <div className={"big-price"}>
-                {"250"}
-                <span>{".00 CAD"}</span>
+                {"357"}
+                <span>{".14 CAD"}</span>
               </div>
-              <p className={"discount"}>
-                {"Save $107.14 on website creation."}
-              </p>
               <div className={"hosting-price"}>
                 <strong>{"Hosting: $60 per year"}</strong>
-                <b>{"Launch total: $310"}</b>
+                <b>{"Creation + hosting: $417.14"}</b>
                 <small>
                   {
                     "Creation + hosting, excluding the domain and applicable taxes."
@@ -190,13 +185,13 @@ export default function HomeEn() {
                 {"Start my project"}
               </a>
               <ul>
-                <li>{"$125 when you order, $125 before launch"}</li>
+                <li>{"$178.57 when you order, $178.57 before launch"}</li>
                 <li>{"No mandatory maintenance subscription"}</li>
                 <li>{"10 business days to report issues with our work"}</li>
               </ul>
               <p className={"fine"}>
                 {
-                  "Hosting managed by Éclora: $60 per year. Domain name and third-party services are extra. Applicable taxes are extra, where required. Discounted price rounded to the nearest cent. All prices are in Canadian dollars."
+                  "Hosting managed by Éclora: $60 per year. Domain name and third-party services are extra. Applicable taxes are extra, where required. All prices are in Canadian dollars."
                 }
               </p>
             </aside>
@@ -266,6 +261,34 @@ export default function HomeEn() {
                     rel={"noopener noreferrer"}
                   >
                     {"Visit website"}
+                  </a>
+                </div>
+              </article>
+              <article className="project">
+                <PortfolioPreview
+                  lang="en"
+                  src="https://www.pamelagoutondji.ca"
+                  title="Preview of Paméla Goutondji’s website"
+                />
+                <div className="project-info">
+                  <p className="eyebrow">Psychotherapy</p>
+                  <h3>Paméla Goutondji</h3>
+                  <p>
+                    A bilingual website introducing Paméla Goutondji’s
+                    psychotherapy services and making it easy to book an
+                    appointment.
+                  </p>
+                  <div className="project-tags">
+                    <span>Business website</span>
+                    <span>Bilingual</span>
+                  </div>
+                  <a
+                    href="https://www.pamelagoutondji.ca"
+                    className="button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit website
                   </a>
                 </div>
               </article>
